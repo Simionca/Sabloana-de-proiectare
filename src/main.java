@@ -20,5 +20,8 @@ public class main {
         System.out.println("Printing with Alignment");
         System.out.println();
         cap1.print();
+        Image picture = new Image("resources/mem.png");
+        Image picture2 = new Image("resources/hehe.jpg");
+        Image picture3 = new Image("resources/hai.bmp");
     }
 }

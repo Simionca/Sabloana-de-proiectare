@@ -1,19 +1,19 @@
 import java.util.concurrent.TimeUnit;
 
 public class Image implements Element {
-    public String name;
+    private String name;
+
+    public void print() {
+        System.out.println(name);
+    }
+
     Image(String name) {
         this.name = name;
+        new ImageLoaderFactory().load(name);
         try {
             TimeUnit.SECONDS.sleep(5);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
-    public void print()
-    {
-        System.out.println("Image with name: "+name);
-    }
-
-
 }
