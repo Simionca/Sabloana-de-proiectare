@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.ArrayList;
 
 class Book {
@@ -13,11 +14,11 @@ class Book {
         author=a;
     }
 
-    public void addContent(Element e)
+    public void addContent(Element elm)
     {
-        content.add(e);
+        content.add(elm);
     }
-    public void print() {
+    public void print() throws IOException {
         System.out.println("Book:"+title);
         System.out.println("Author:"+author.name);
         for(Element e: content

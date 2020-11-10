@@ -1,10 +1,21 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-public class Image implements Element {
+public class Image implements Element{
     private String name;
 
     public void print() {
         System.out.println(name);
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+
     }
 
     Image(String name) {

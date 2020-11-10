@@ -1,4 +1,3 @@
-
 public class Table implements Element {
     public String name;
     Table(String n)
@@ -8,5 +7,10 @@ public class Table implements Element {
     public void print()
     {
         System.out.println(name);
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
     }
 }

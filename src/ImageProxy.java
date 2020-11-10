@@ -1,22 +1,29 @@
+import javax.imageio.ImageIO;
+import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class ImageProxy implements Element{
 
-    public String nameProxy;
+    private String name;
     Image realImage=null;
 
-    ImageProxy(String name)
-    {
-        this.nameProxy=name;
+    ImageProxy(String name){
+        this.name=name;
     }
 
-    public void print()
-    {
-        if(realImage==null)
-        {
-            realImage= new Image(this.nameProxy);
+    public void print() throws IOException {
+        if(realImage==null){
+            realImage = new Image(this.name);
         }
+
         realImage.print();
     }
 
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
 }

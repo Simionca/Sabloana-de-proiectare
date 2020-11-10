@@ -5,6 +5,7 @@ public class Paragraph implements Element {
     {
         name=n;
     }
+
     public String getName()
     {
         return this.name;
@@ -15,13 +16,20 @@ public class Paragraph implements Element {
         {
             System.out.println(this.name);
         }
-        else
-        {
+        else{
             align.render(this);
         }
     }
-    public void setAlignStrategy(AlignStrategy a)
-    {
-        this.align=a;
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
     }
+
+
+    public void setAlignStrategy(AlignStrategy c)
+    {
+        this.align=c;
+    }
+
 }

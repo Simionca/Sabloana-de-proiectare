@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Section implements Element {
@@ -9,27 +10,33 @@ public class Section implements Element {
         title=t;
     }
 
-    public void add(Element e)
+    public void add(Element elm)
     {
-        content.add(e);
+        content.add(elm);
     }
 
-    public void remove(Element e)
+    public void remove(Element elm)
     {
-        content.remove(e);
+        content.remove(elm);
     }
 
     public Element getElement(int index){
         return content.get(index);
     }
 
-    public void print()
-    {
+    public void print() throws IOException {
         System.out.println(title);
         for(Element e:content)
         {
 
             e.print();
+        }
+    }
+
+    public void accept(Visitor visitor){
+        visitor.visit(this);
+        for(Element elem : content){
+            elem.accept(visitor);
         }
     }
 }
