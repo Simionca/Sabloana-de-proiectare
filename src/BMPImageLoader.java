@@ -9,18 +9,21 @@ import java.io.File;
 import java.io.IOException;
 
 public class BMPImageLoader {
-    public BMPImageLoader(String path) {
+    public BMPImageLoader(String i){
         try {
-            BufferedImage picture = ImageIO.read(new File(path));
-            JLabel pLable=new JLabel(new ImageIcon(picture));
-            JPanel jPanel=new JPanel();
+            BufferedImage picture = ImageIO.read(new File(i));
+            JLabel pLable = new JLabel(new ImageIcon(picture));
+            JPanel jPanel = new JPanel();
             jPanel.add(pLable);
-            JFrame jFrame=new JFrame();
+            JFrame jFrame = new JFrame();
             jFrame.setSize(new Dimension(picture.getWidth(), picture.getHeight()));
             jFrame.add(jPanel);
             jFrame.setVisible(true);
-        } catch (IOException e) {
+            jFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 }

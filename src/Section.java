@@ -24,7 +24,7 @@ public class Section implements Element {
         return content.get(index);
     }
 
-    public void print() throws IOException {
+    public void print() {
         System.out.println(title);
         for(Element e:content)
         {

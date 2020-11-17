@@ -14,7 +14,7 @@ public class ImageProxy implements Element{
         this.name=name;
     }
 
-    public void print() throws IOException {
+    public void print(){
         if(realImage==null){
             realImage = new Image(this.name);
         }

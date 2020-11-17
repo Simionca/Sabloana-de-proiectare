@@ -1,29 +1,36 @@
-import java.io.IOException;
 import java.util.ArrayList;
 
-class Book {
-    public String title;
-    public Author author;
-    public ArrayList<Element> content=new ArrayList<>();
-    Book(String t)
+public class Book {
+    String title;
+    public Author autor;
+    public ArrayList<Element> content = new ArrayList<>();
+
+    public Book(String title)
     {
-        title=t;
+        this.title = title;
     }
     public void addAuthor(Author a)
     {
-        author=a;
+        autor =a;
     }
-
-    public void addContent(Element elm)
+    public void addContent(Element e)
     {
-        content.add(elm);
+        content.add(e);
     }
-    public void print() throws IOException {
-        System.out.println("Book:"+title);
-        System.out.println("Author:"+author.name);
-        for(Element e: content
-        ) {e.print();}
+    public void print()
+    {
+        System.out.println("Book:" + title);
+        System.out.println("Author:" + autor.name);
+        for(Element e: content)
+        {
+            e.print();
+        }
     }
 
-
+    public void accept(Visitor v){
+        v.visit(this);
+        for(Element i:content){
+            i.accept(v);
+        }
+    }
 }
