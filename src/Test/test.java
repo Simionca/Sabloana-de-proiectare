@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class test {
 
-    public static void main(String args) throws Exception {
+    public static void main(String[] args) throws Exception {
     Director dir = new Director("Director");
     txt txt1 = new txt("Geralt of Rivia is the main");
     txt txt2 = new txt("Tris merigold is his wife");
@@ -31,3 +31,12 @@ public class test {
 
 
 }
+  //  _____Geralt of Rivia is the main.txt
+    //    Tris merigold is his wife.txt_____
+    //    ___Yeniffer of Vengerberg was his wife.txt___
+   //     Gucci Gang.mp3
+   //     svg.svg
+   //     Director Statistics:
+   //     *** Spatiu txt: 15 Kb
+   //     *** Spatiu svg: 45 Kb
+  //      *** Spatiu mp3: 3 Mb
