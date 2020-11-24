@@ -12,13 +12,4 @@ public class DirectorManager {
         }
         return instance;
     }
-
-    public static Director getBook()
-    {
-        return instanced_book;
-    }
-    public static void setBook(Director d)
-    {
-        instanced_book=d;
-    }
 }
