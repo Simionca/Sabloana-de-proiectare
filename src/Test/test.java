@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class test {
 
-    public static void main(String args) throws IOException {
+    public static void main(String args) throws Exception {
     Director dir = new Director("Director");
     txt txt1 = new txt("Geralt of Rivia is the main");
     txt txt2 = new txt("Tris merigold is his wife");
