@@ -4,7 +4,6 @@ public class DirectorManager {
     public static DirectorManager instance;
     private static Director instanced_book;
     private DirectorManager(){
-
     }
     public static DirectorManager getInstance(){
         if(instance==null){
@@ -12,8 +11,7 @@ public class DirectorManager {
         }
         return instance;
     }
-
-    public static Director getBook()
+    public static Director getDir()
     {
         return instanced_book;
     }

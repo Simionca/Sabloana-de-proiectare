@@ -24,7 +24,6 @@ public class txt implements Fisier{
             align.render(this);
         }
     }
-
     public void setAlignStratagy(AlignStrategy a)
     {
         align=a;
@@ -32,10 +31,6 @@ public class txt implements Fisier{
     public void accept(VisitorSpace visitor) {
         visitor.visit(this);
     }
-
-
-
-
     public void setAlignStrategy(AlignStrategy a)
     {
             this.align=a;

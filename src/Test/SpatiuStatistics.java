@@ -15,10 +15,7 @@ public class SpatiuStatistics implements VisitorSpace{
     public void visit(mp3 mp3) {
         this.spatiump3=spatiump3+3;
     }
-
-
     public void visit(Director dir) {
-
     }
     public void printStatistics(){
         System.out.println("Director Statistics: ");

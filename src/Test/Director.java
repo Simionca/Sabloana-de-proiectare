@@ -22,7 +22,6 @@ public class Director {
     public void print() throws IOException {
         System.out.println("Director " + nume);
         for (Fisier e : content) {
-
             e.print();
         }
     }
