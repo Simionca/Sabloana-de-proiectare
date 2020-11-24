@@ -15,7 +15,7 @@ public class DirectorManager {
     {
         return instanced_book;
     }
-    public static void setBook(Director d)
+    public static void setDir(Director d)
     {
         instanced_book=d;
     }
